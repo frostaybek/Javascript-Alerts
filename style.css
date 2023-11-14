@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(55, 53, 53);
+}
+
+.header{
+    margin: 12px 24px;
+    font-family: calibri;
+    color: #ffff;
+    font-size: 62px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.header:hover{
+    color: rgb(111, 255, 0);
+}

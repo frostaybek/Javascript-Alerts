@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body> 
+    <h1 onclick="alert('You clicked me, go ahead!');" class="header">Click me!</h1>
+    <h1 onclick="console.log('You clicked second text, go ahead!');" class="header">Click me! (check console)</h1>
+    <h1 class="header" onmouseenter="alert('You hovered me, go ahead!');" style="display: inline;">Hover me!</h1>
+    <h1 id="title" onclick="clicked();" class="header">Click me!</h1>
+    <h1 onclick="no();" id="p" class="header">You dont have to click me </h1>
+    <script type="text/javascript">
+        function clicked(){
+        console.log("You clicked me, go ahead!");
+
+        $("#title").html("You clicked me, now click me again.");
+        $("#title").click(function () {
+            $("#title").html("Click me!");
+            $("#title").off("click");
+        });
+        };
+
+        $("#title").hover(function(){
+            $("#title").css("color", "yellow");
+        },
+        function(){
+            $("#title").css("color", "blue");
+        });
+
+        $('#p').css('background', 'purple')
+        $('#p').css('width', '1000px')
+        $('#p').css('border-radius', '12px')
+        $('#p').css('padding-left', '12px')
+
+    </script>
+</body>
+</html>
